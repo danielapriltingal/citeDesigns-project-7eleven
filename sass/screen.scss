@@ -3,4 +3,88 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+//@import "compass/reset";
+
+$background-header: url("../src/img/banner.png");
+$bg-color: #FFFFFF;
+$color: #0c6c43;
+$non-val: none;
+$text: Arial;
+$l-position: left;
+$c-position:center;
+$px-2: 2px;
+$auto-val: auto;
+
+body {
+  background-color: $bg-color;
+  font-family: $text;
+}
+
+header{
+  background-image: $background-header;
+  height: 216px;
+}
+
+div {
+  nav {
+    margin: 0 9% 0 12%;
+  }
+    ul :first-child {
+      border-width: $px-2 0 $px-2 $px-2;
+    }
+    ul :last-child {
+      border-width: $px-2 $px-2 $px-2 0;
+    }
+      li {
+        text-align: $c-position;
+        display: inline;
+        list-style: $non-val;
+        float: $l-position;
+        width: 23%;
+        padding: 19px 0 19px 0;
+        border: solid $px-2 $color;
+        border-width: $px-2 0 $px-2 0;
+        font-size: 200%;
+      }
+  a{
+    @extend .nav-link
+  }
+}
+
+.nav-link {
+  color: $color;
+  text-decoration: $non-val;
+}
+
+a:link :visited{
+ @extend .nav-link;
+}
+a:hover{
+  @extend .nav-link;
+  opacity: 0.6;
+}
+a:active{
+  @extend .nav-link;
+}
+
+div {
+  section{
+    clear: both;
+  }
+}
+
+footer{
+  background-color: $color;
+  color: #FFFFFF;
+  section {
+    text-align: $c-position;
+    display: inline;
+    float: $l-position;
+    width: 23%;
+    height: $auto-val;
+    font-size: 150%;
+  }
+  li{
+    list-style: $non-val;
+  }
+}
