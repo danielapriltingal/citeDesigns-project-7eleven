@@ -2,34 +2,38 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 18, ../sass/screen.scss */
+/* line 21, ../sass/screen.scss */
 body {
   background-color: #FFFFFF;
-  font-family: Arial;
+  font-family: Geo Sans-Light;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 header {
-  background-image: url("../src/img/banner.png");
   height: 216px;
+  width: 100%;
+  background: url("../src/img/banner.png") no-repeat;
 }
 
-/* line 29, ../sass/screen.scss */
-div nav {
+/* line 32, ../sass/screen.scss */
+nav {
   margin: 0 9% 0 12%;
 }
-/* line 32, ../sass/screen.scss */
-div ul :first-child {
+
+/* line 35, ../sass/screen.scss */
+ul :first-child {
   border-width: 2px 0 2px 2px;
 }
-/* line 35, ../sass/screen.scss */
-div ul :last-child {
+
+/* line 38, ../sass/screen.scss */
+ul :last-child {
   border-width: 2px 2px 2px 0;
 }
-/* line 38, ../sass/screen.scss */
-div li {
+
+/* line 41, ../sass/screen.scss */
+li {
   text-align: center;
-  display: inline;
+  display: block;
   list-style: none;
   float: left;
   width: 23%;
@@ -39,28 +43,80 @@ div li {
   font-size: 200%;
 }
 
-/* line 54, ../sass/screen.scss */
-.nav-link, div a, a:link :visited, a:hover, a:active {
+/* line 52, ../sass/screen.scss */
+a {
+  display: block;
+}
+
+/* line 58, ../sass/screen.scss */
+.nav-link, a, a:link :visited, a:hover, a:active {
   color: #0c6c43;
   text-decoration: none;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 a:hover {
   opacity: 0.6;
 }
 
-/* line 71, ../sass/screen.scss */
-div section {
-  clear: both;
+/*care of Jem*/
+/* line 78, ../sass/screen.scss */
+.btn-red, .submit-btn {
+  background-color: red;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
+.container, div section, div form {
+  width: 80%;
+  align: center;
+  margin: 0 auto;
+}
+
+/* line 89, ../sass/screen.scss */
+.submit-btn {
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+}
+
+/* line 96, ../sass/screen.scss */
+.jumbo-text {
+  font-size: 50px;
+}
+
+/* line 99, ../sass/screen.scss */
+.small-text {
+  font-size: 25px;
+}
+
+/* line 103, ../sass/screen.scss */
+div {
+  clear: both;
+}
+/* line 108, ../sass/screen.scss */
+div section h1, div section h2, div section h3 {
+  text-align: center;
+}
+/* line 113, ../sass/screen.scss */
+div form {
+  width: 500px;
+  height: 500px;
+  box-shadow: 2px 2px 10px 2px #888888;
+  border-radius: 9px;
+  padding: 20px 5px 5px 5px;
+}
+/* line 121, ../sass/screen.scss */
+div img {
+  right: 10px;
+}
+
+/*care of ken*/
+/* line 127, ../sass/screen.scss */
 footer {
   background-color: #0c6c43;
   color: #FFFFFF;
 }
-/* line 79, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 footer section {
   text-align: center;
   display: inline;
@@ -69,7 +125,7 @@ footer section {
   height: auto;
   font-size: 150%;
 }
-/* line 87, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 footer li {
   list-style: none;
 }
