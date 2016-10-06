@@ -5,6 +5,10 @@
 
 @import "compass/reset";
 
+@font-face {
+  font-family: "GeosansLight Medium";
+  src: url(../fonts/GeosansLight.ttf);
+}
 
 $background-header: url("../src/img/banner.png");
 $bg-color: #FFFFFF;
@@ -23,8 +27,11 @@ body {
   border: 0;
 padding: 0;
   background-color: $bg-color;
-  font-family: sans-serif;
+  font-family: "GeosansLight Medium";
+
 }
+
+
 
 header{
   height: 216px;
