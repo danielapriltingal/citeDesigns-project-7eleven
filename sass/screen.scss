@@ -3,11 +3,14 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-//@import "compass/reset";
+@import "compass/reset";
 
+@font-face {
+  font-family: "GeosansLight Medium";
+  src: url(../fonts/GeosansLight.ttf);
+}
 
 $background-header: url("../src/img/banner.png");
-$bg-color: #FFFFFF;
 $color: #0c6c43;
 $non-val: none;
 $text: SansSerif;
@@ -20,58 +23,59 @@ $small-font: 25px;
 $font-size: 25px;
 
 body {
-  background-color: $bg-color;
-  font-family: $text;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: "GeosansLight Medium";
+
 }
+
+
 
 header{
   height: 216px;
   width: 100%;
-  background: $background-header no-repeat;
+  background-image: $background-header;
+  background-size: 100% 100%;
 }
 
-  nav {
-    margin: 0 9% 0 12%;
-  }
+nav {
+    ul{
+      margin: 0 0 0 4%;
+    }
     ul :first-child {
       border-width: $px-2 0 $px-2 $px-2;
     }
     ul :last-child {
       border-width: $px-2 $px-2 $px-2 0;
     }
-      li {
-        text-align: $c-position;
-        display: block;
-        list-style: $non-val;
-        float: $l-position;
-        width: 23%;
-        padding: 19px 0 19px 0;
-        border: solid $px-2 $color;
-        border-width: $px-2 0 $px-2 0;
-        font-size: 200%;
-      }
-  a{
-    display:block;
-    @extend .nav-link
+    li {
+      text-align: $c-position;
+      display: block;
+      list-style: $non-val;
+      float: $l-position;
+      width: 23%;
+      padding: 19px 0 19px 0;
+      border: solid $px-2 $color;
+      border-width: $px-2 0 $px-2 0;
+      font-size: 200%;
+    }
+    a {
+      @extend .nav-link;
+    }
+    a:link :visited :active{
+      @extend .nav-link;
+    }
+    a:hover{
+      @extend .nav-link;
+      opacity: 0.6;
+    }
   }
-
 
 .nav-link {
   color: $color;
   text-decoration: $non-val;
 }
-
-a:link :visited{
-  @extend .nav-link;
-}
-a:hover{
-  @extend .nav-link;
-  opacity: 0.6;
-}
-a:active{
-  @extend .nav-link;
-}
-
 
 /*care of Jem*/
 
@@ -105,7 +109,6 @@ a:active{
 .small-text{
   font-size: $small-font;
 }
-
 $radius: 3px;
 @mixin border{
 
@@ -141,7 +144,11 @@ div {
       text-align: center;
     }
   }
-
+div{
+  img{
+    position: absolute;
+  }
+}
   form{
 
     @extend .container;
@@ -203,19 +210,49 @@ div {
 }
 
 /*care of ken*/
-footer{
-  background-color: $color;
-  color: #FFFFFF;
-  section {
-    text-align: $c-position;
-    display: inline;
-    float: $l-position;
-    width: 23%;
-    height: $auto-val;
-    font-size: 150%;
-  }
-  li{
-    list-style: $non-val;
+
+.wrapper{
+  margin: 0px auto;
+  padding-left: 145px;
+  width: 1200px;
+  display: block;
+  height: 340px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #b0f3fa;
+}
+
+#footer-container {
+  background: #006B41;
+  height: 340px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer-class li{
+  border:solid 0px;
+  width: initial;
+  text-align: left;
+  float: none;
+  font-size: 22px;
+  color: white;
+  padding: 10px 0 15px 0;
+  a.bold-footer {
+    font-weight:bold;
   }
 }
 
+
+.footer-class {
+  padding-top: 15px;
+  width: 25%;
+  float: left;
+}
