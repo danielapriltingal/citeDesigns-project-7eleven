@@ -7,7 +7,6 @@
 
 
 $background-header: url("../src/img/banner.png");
-$bg-color: #FFFFFF;
 $color: #0c6c43;
 $non-val: none;
 $text: Geo Sans-Light;
@@ -19,58 +18,54 @@ $jumbo-font: 50px;
 $small-font: 25px;
 
 body {
-  background-color: $bg-color;
+  background-color: #FFFFFF;
   font-family: $text;
 }
 
 header{
   height: 216px;
   width: 100%;
-  background: $background-header no-repeat;
+  background-image: $background-header;
+  background-size: 100% 100%;
 }
 
-  nav {
-    margin: 0 9% 0 12%;
-  }
+nav {
+    ul{
+      margin: 0 0 0 4%;
+    }
     ul :first-child {
       border-width: $px-2 0 $px-2 $px-2;
     }
     ul :last-child {
       border-width: $px-2 $px-2 $px-2 0;
     }
-      li {
-        text-align: $c-position;
-        display: block;
-        list-style: $non-val;
-        float: $l-position;
-        width: 23%;
-        padding: 19px 0 19px 0;
-        border: solid $px-2 $color;
-        border-width: $px-2 0 $px-2 0;
-        font-size: 200%;
-      }
-  a{
-    display:block;
-    @extend .nav-link
+    li {
+      text-align: $c-position;
+      display: block;
+      list-style: $non-val;
+      float: $l-position;
+      width: 23%;
+      padding: 19px 0 19px 0;
+      border: solid $px-2 $color;
+      border-width: $px-2 0 $px-2 0;
+      font-size: 200%;
+    }
+    a {
+      @extend .nav-link;
+    }
+    a:link :visited :active{
+      @extend .nav-link;
+    }
+    a:hover{
+      @extend .nav-link;
+      opacity: 0.6;
+    }
   }
-
 
 .nav-link {
   color: $color;
   text-decoration: $non-val;
 }
-
-a:link :visited{
-  @extend .nav-link;
-}
-a:hover{
-  @extend .nav-link;
-  opacity: 0.6;
-}
-a:active{
-  @extend .nav-link;
-}
-
 
 /*care of Jem*/
 
@@ -104,7 +99,6 @@ a:active{
   font-size: $small-font;
 }
 
-
 div {
   clear: both;
   section{
@@ -114,7 +108,11 @@ div {
       text-align: center;
     }
   }
-
+div{
+  img{
+    position: absolute;
+  }
+}
   form{
     @extend .container;
     width: 500px;
