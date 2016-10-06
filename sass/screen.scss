@@ -10,13 +10,11 @@
   src: url(../fonts/GeosansLight.ttf);
 }
 
-$background-header: url("../src/img/banner.png");
+$background-header: url("../img/banner.png");
 $color: #0c6c43;
 $non-val: none;
-$text: SansSerif;
 $l-position: left;
 $c-position:center;
-$px-2: 2px;
 $auto-val: auto;
 $jumbo-font: 35px;
 $small-font: 25px;
@@ -43,56 +41,54 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+/*Pete Starts*/
+
 header{
   height: 216px;
   width: 100%;
-  background-image: $background-header;
+  background: $background-header no-repeat;
   background-size: 100% 100%;
-}
-.nav-link {
-  color: $color;
-  text-decoration: $non-val;
+  margin: -44px 0 0 0;
 }
 
-
-nav {
-    ul{
-      margin: 0 0 0 6%;
-    }
-    ul :first-child {
-      border-width: $px-2 0 $px-2 $px-2;
-    }
-    ul :last-child {
-      border-width: $px-2 $px-2 $px-2 0;
-    }
-
-    li {
-      text-align: $c-position;
-      display: block;
-      list-style: $non-val;
-      float: $l-position;
-      width: 23%;
-      padding: 19px 0 19px 0;
-      border: solid $px-2 $color;
-      border-width: $px-2 0 $px-2 0;
-      font-size: 200%;
-    }
-    a {
-      @extend .nav-link;
-    }
-    a:link :visited :active{
-      @extend .nav-link;
-    }
-    a:hover{
-      @extend .nav-link;
-      opacity: 0.6;
-    }
+nav{
+    margin: 10px 0 26px 0;
+  ul{
+    display: inline;
+    padding: 18px;
+    border: solid 2px #006B41;
+    font-size: 200%;
+    font-weight: bold;
   }
-
-.nav-link {
-  color: $color;
-  text-decoration: $non-val;
+  li{
+    display: inline;
+    padding: 0 50px 0 99px;
+  }
+  a{
+    color: #006B41;
+    position: relative;
+    padding: 29px 0 29px 0;
+    text-decoration: none;
+  }
 }
+
+a.nav-link.active:after{
+  content: "";
+  display: block;
+  border: 10px solid transparent;
+  border-bottom-color: #006b41;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -12px;
+}
+.nav-link:hover:after{
+  @extend a.nav-link.active:after;
+  transition: 10s;
+  opacity: 0.6;
+}
+
+  /*Pete end*/
 
 /*care of Jem*/
 
@@ -123,6 +119,7 @@ nav {
 
 .jumbo-text{
   font-size: $jumbo-font;
+  font-weight: bold;
 }
 .small-text{
   font-size: $small-font;
@@ -173,7 +170,8 @@ $margin: 15px;
 
 .note{
   width: 100%;
-  padding: 10px 0 10px 0;
+  padding: 36px 0 10px 0;
+  margin: 25px 0 0 0;
 }
 div {
   clear: both;
@@ -276,14 +274,11 @@ div {
     height: 340px;
   }
 
-  a {
+  footer a {
     color: white;
     text-decoration: none;
   }
 
-  a:hover {
-    color: #b0f3fa;
-  }
 
   #footer-container {
     background: #006B41;
