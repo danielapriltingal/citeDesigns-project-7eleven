@@ -3,8 +3,12 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-//@import "compass/reset";
+@import "compass/reset";
 
+@font-face {
+  font-family: "GeosansLight Medium";
+  src: url(../fonts/GeosansLight.ttf);
+}
 
 $background-header: url("../src/img/banner.png");
 $color: #0c6c43;
@@ -18,9 +22,20 @@ $jumbo-font: 50px;
 $small-font: 25px;
 
 body {
+<<<<<<< HEAD
   background-color: #FFFFFF;
   font-family: $text;
+=======
+  margin: 0;
+  border: 0;
+padding: 0;
+  background-color: $bg-color;
+  font-family: "GeosansLight Medium";
+
+>>>>>>> 7c5fab8d5b83075bea0e9c939cc60cce43e97ec9
 }
+
+
 
 header{
   height: 216px;
@@ -127,19 +142,49 @@ div{
 }
 
 /*care of ken*/
-footer{
-  background-color: $color;
-  color: #FFFFFF;
-  section {
-    text-align: $c-position;
-    display: inline;
-    float: $l-position;
-    width: 23%;
-    height: $auto-val;
-    font-size: 150%;
-  }
-  li{
-    list-style: $non-val;
+
+.wrapper{
+  margin: 0px auto;
+  padding-left: 145px;
+  width: 1200px;
+  display: block;
+  height: 340px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #b0f3fa;
+}
+
+#footer-container {
+  background: #006B41;
+  height: 340px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer-class li{
+  border:solid 0px;
+  width: initial;
+  text-align: left;
+  float: none;
+  font-size: 22px;
+  color: white;
+  padding: 10px 0 15px 0;
+  a.bold-footer {
+    font-weight:bold;
   }
 }
 
+
+.footer-class {
+  padding-top: 15px;
+  width: 25%;
+  float: left;
+}
