@@ -177,132 +177,139 @@ $margin: 15px;
 }
 div {
   clear: both;
-  section{
+  section {
     @extend .container;
 
-    h1,h2,h3{
+    h1, h2, h3 {
       text-align: center;
       @extend .note;
     }
-    p{
+    p {
       @extend .note;
       margin: 0 0 0 20%;
       color: #ff3835;
     }
-    span{
+    span {
       @extend .note;
       margin: 0 0 0 7%;
       text-align: center;
     }
 
-    .box-div{@include box-shadow;}
-  }
-
-div{
-  img{
-    position: relative;
-    left: 10px;
-    top: -220px;
-  }
-  form{
-    @extend .container;
-    label{
-      font-size: $font-size;
+    .box-div {
+      @include box-shadow;
     }
+  }
 
-    span{
-      //font-size: 20px;
-      display: inline-block;
-      cursor: pointer;
+  div {
+    img {
       position: relative;
-      padding-left: 25px;
-      margin-right: 15px;
-      margin-top: 50px;
-      font-size: $font-size - 5;
-      float:right;
+      left: 10px;
+      top: -220px;
     }
+    form {
+      @extend .container;
+      width: 500px;
+      height: 500px;
+      box-shadow: 2px 2px 10px 2px #888888 ;
+      border-radius: 9px;
+      padding: 20px 5px 5px 5px;
+      label {
+        font-size: $font-size;
+      }
 
-    span:before{
-      content: "";
-      display: inline-block;
+      span {
+        //font-size: 20px;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 25px;
+        margin-right: 15px;
+        margin-top: 50px;
+        font-size: $font-size - 5;
+        float: right;
+      }
 
-      width: 25px;
-      height: 25px;
+      span:before {
+        content: "";
+        display: inline-block;
 
-      margin-right: 20px;
-      position: absolute;
-      left: 0;
-      bottom: 1px;
-      background-color: #cedbca;
-      //box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+        width: 25px;
+        height: 25px;
 
+        margin-right: 20px;
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        background-color: #cedbca;
+        //box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+
+      }
+      input[type=checkbox] {
+        display: none;
+      }
+
+      .checkbox span:before {
+        border-radius: 3px;
+      }
+
+      input[type=checkbox]:checked + span:before {
+        content: "\2713";
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+        font-size: 15px;
+        color: #f3f3f3;
+        text-align: center;
+        line-height: 15px;
+      }
     }
-    input[type=checkbox] {
-      display: none;
-    }
-
-    .checkbox span:before {
-      border-radius: 3px;
-    }
-
-    input[type=checkbox]:checked + span:before {
-      content: "\2713";
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-      font-size: 15px;
-      color: #f3f3f3;
-      text-align: center;
-      line-height: 15px;
+    img {
+      right: 10px;
     }
   }
-  img{
-    right: 10px;
+
+  /*care of ken*/
+
+  .wrapper {
+    margin: 0px auto;
+    padding-left: 145px;
+    width: 1200px;
+    display: block;
+    height: 340px;
   }
-}
 
-/*care of ken*/
-
-.wrapper{
-  margin: 0px auto;
-  padding-left: 145px;
-  width: 1200px;
-  display: block;
-  height: 340px;
-}
-
-a{
-  color: white;
-  text-decoration: none;
-}
-
-a:hover{
-  color: #b0f3fa;
-}
-
-#footer-container {
-  background: #006B41;
-  height: 340px;
-}
-
-.footer ul {
-  list-style: none;
-}
-
-.footer-class li{
-  border:solid 0px;
-  width: initial;
-  text-align: left;
-  float: none;
-  font-size: 22px;
-  color: white;
-  padding: 10px 0 15px 0;
-  a.bold-footer {
-    font-weight:bold;
+  a {
+    color: white;
+    text-decoration: none;
   }
-}
 
+  a:hover {
+    color: #b0f3fa;
+  }
 
-.footer-class {
-  padding-top: 15px;
-  width: 25%;
-  float: left;
+  #footer-container {
+    background: #006B41;
+    height: 340px;
+  }
+
+  .footer ul {
+    list-style: none;
+  }
+
+  .footer-class li {
+    border: solid 0px;
+    width: initial;
+    text-align: left;
+    float: none;
+    font-size: 22px;
+    color: white;
+    padding: 10px 0 15px 0;
+    a.bold-footer {
+      font-weight: bold;
+    }
+  }
+
+  .footer-class {
+    padding-top: 15px;
+    width: 25%;
+    float: left;
+  }
 }
