@@ -62,7 +62,7 @@ a:hover {
 /*care of Jem*/
 /* line 78, ../sass/screen.scss */
 .btn-red, .submit-btn {
-  background-color: red;
+  background-color: #ff3835;
 }
 
 /* line 83, ../sass/screen.scss */
@@ -74,30 +74,34 @@ a:hover {
 
 /* line 89, ../sass/screen.scss */
 .submit-btn {
-  border-radius: 5px;
+  border: 0px;
+  border-radius: 2px;
+  color: #ffffff;
   width: 200px;
   height: 50px;
+  font-size: 30px;
+  padding: 10px 10px 45px 10px;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .jumbo-text {
   font-size: 50px;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .small-text {
   font-size: 25px;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 div {
   clear: both;
 }
-/* line 108, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 div section h1, div section h2, div section h3 {
   text-align: center;
 }
-/* line 113, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 div form {
   width: 500px;
   height: 500px;
@@ -105,18 +109,18 @@ div form {
   border-radius: 9px;
   padding: 20px 5px 5px 5px;
 }
-/* line 121, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 div img {
   right: 10px;
 }
 
 /*care of ken*/
-/* line 127, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 footer {
   background-color: #0c6c43;
   color: #FFFFFF;
 }
-/* line 130, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 footer section {
   text-align: center;
   display: inline;
@@ -125,7 +129,7 @@ footer section {
   height: auto;
   font-size: 150%;
 }
-/* line 138, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 footer li {
   list-style: none;
 }
