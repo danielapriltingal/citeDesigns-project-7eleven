@@ -46,7 +46,7 @@ header{
 
 nav {
     ul{
-      margin: 0 0 0 4%;
+      margin: 0 0 0 6%;
     }
     ul :first-child {
       border-width: $px-2 0 $px-2 $px-2;
@@ -141,6 +141,10 @@ $radius: 3px;
   background-color: black;
 }
 
+.note{
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
 div {
   clear: both;
   section{
@@ -148,11 +152,24 @@ div {
 
     h1,h2,h3{
       text-align: center;
+      @extend .note;
+    }
+    p{
+      @extend .note;
+      margin: 0 0 0 20%;
+      color: #ff3835;
+    }
+    span{
+      @extend .note;
+      margin: 0 0 0 7%;
+      text-align: center;
     }
   }
 div{
   img{
-    position: absolute;
+    position: relative;
+    left: 10px;
+    top: -220px;
   }
 }
   form{
