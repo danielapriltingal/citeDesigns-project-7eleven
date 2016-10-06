@@ -20,6 +20,12 @@ $jumbo-font: 35px;
 $small-font: 25px;
 $font-size: 25px;
 
+.container{
+  width: 80%;
+  align: center;
+  margin:0 auto;
+}
+
 body {
   margin: 0;
   border: 0;
@@ -70,6 +76,9 @@ nav{
     padding: 29px 0 29px 0;
     text-decoration: none;
   }
+  a:hover{
+    opacity: 0.6;
+  }
 }
 
 a.nav-link.active:after{
@@ -90,221 +99,4 @@ a.nav-link.active:after{
 
   /*Pete end*/
 
-/*care of Jem*/
-
-//color button
-.btn-red{
-  background-color: #ff3835;
-}
-
-//modified style
-.container{
-  width: 80%;
-  align: center;
-  margin:0 auto;
-}
-
-.submit-btn{
-  @extend .btn-red;
-  border: 0px;
-  border-radius: 2px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  font-size: 30px;
-  padding: 10px 60px;
-  float: right;
-  margin: 50px;
-}
-
-.jumbo-text{
-  font-size: $jumbo-font;
-  font-weight: bold;
-}
-.small-text{
-  font-size: $small-font;
-}
-$radius: 3px;
-@mixin border{
-
-  border: 0px;
-  border-radius: $radius;
-  background-color: #cedbca;
-}
-
-$margin: 15px;
-.form-input{
-  @include border;
-  padding: 15px;
-  margin: $margin;
-
-  font-size: $font-size;
-  width: 400px;
-}
-
-.form-date{
-  @include border;
-  padding: 10px;
-  border-radius: $radius + 7;
-  font-size: $font-size - 6;
-  margin-left: 12px;
-}
-.parag{
-  margin: 10px;
-}
-
-.name{
-  display: inline-block;
-  background-color: black;
-}
-
-
-@mixin box-shadow{
-  width: 560px;
-  height: 500px;
-  box-shadow: 5px 2px 20px 5px #888888;
-  border-radius: 9px;
-  padding: 50px 0px 5px 50px;
-}
-
-
-.note{
-  width: 100%;
-  padding: 36px 0 10px 0;
-  margin: 25px 0 0 0;
-}
-div {
-  clear: both;
-  section {
-    @extend .container;
-
-    h1, h2, h3 {
-      text-align: center;
-      @extend .note;
-    }
-    p {
-      @extend .note;
-      margin: 0 0 0 20%;
-      color: #ff3835;
-    }
-    span {
-      @extend .note;
-      margin: 0 0 0 7%;
-      text-align: center;
-    }
-
-    .box-div {
-      @include box-shadow;
-    }
-  }
-
-  div {
-    img {
-      position: relative;
-      left: 10px;
-      top: -220px;
-    }
-    form {
-      @extend .container;
-      width: 500px;
-      height: 500px;
-      box-shadow: 2px 2px 10px 2px #888888 ;
-      border-radius: 9px;
-      padding: 20px 5px 5px 5px;
-      label {
-        font-size: $font-size;
-      }
-
-      span {
-        //font-size: 20px;
-        display: inline-block;
-        cursor: pointer;
-        position: relative;
-        padding-left: 25px;
-        margin-right: 15px;
-        margin-top: 50px;
-        font-size: $font-size - 5;
-        float: right;
-      }
-
-      span:before {
-        content: "";
-        display: inline-block;
-
-        width: 25px;
-        height: 25px;
-
-        margin-right: 20px;
-        position: absolute;
-        left: 0;
-        bottom: 1px;
-        background-color: #cedbca;
-        //box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
-
-      }
-      input[type=checkbox] {
-        display: none;
-      }
-
-      .checkbox span:before {
-        border-radius: 3px;
-      }
-
-      input[type=checkbox]:checked + span:before {
-        content: "\2713";
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-        font-size: 15px;
-        color: #f3f3f3;
-        text-align: center;
-        line-height: 15px;
-      }
-    }
-    img {
-      right: 10px;
-    }
-  }
-
-  /*care of ken*/
-
-  .wrapper {
-    margin: 0px auto;
-    padding-left: 145px;
-    width: 1200px;
-    display: block;
-    height: 340px;
-  }
-
-  footer a {
-    color: white;
-    text-decoration: none;
-  }
-
-
-  #footer-container {
-    background: #006B41;
-    height: 340px;
-  }
-
-  .footer ul {
-    list-style: none;
-  }
-
-  .footer-class li {
-    border: solid 0px;
-    width: initial;
-    text-align: left;
-    float: none;
-    font-size: 22px;
-    color: white;
-    padding: 10px 0 15px 0;
-    a.bold-footer {
-      font-weight: bold;
-    }
-  }
-
-  .footer-class {
-    padding-top: 15px;
-    width: 25%;
-    float: left;
-  }
-}
+@import "form";
