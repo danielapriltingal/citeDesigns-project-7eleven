@@ -2,67 +2,134 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+/* line 21, ../sass/screen.scss */
+body {
+  background-color: #FFFFFF;
+  font-family: Geo Sans-Light;
 }
 
-/* line 22, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
+/* line 26, ../sass/screen.scss */
+header {
+  height: 216px;
+  width: 100%;
+  background: url("../src/img/banner.png") no-repeat;
 }
 
-/* line 24, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
+/* line 32, ../sass/screen.scss */
+nav {
+  margin: 0 9% 0 12%;
 }
 
-/* line 26, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* line 35, ../sass/screen.scss */
+ul :first-child {
+  border-width: 2px 0 2px 2px;
 }
 
-/* line 28, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+/* line 38, ../sass/screen.scss */
+ul :last-child {
+  border-width: 2px 2px 2px 0;
 }
 
-/* line 30, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+/* line 41, ../sass/screen.scss */
+li {
+  text-align: center;
   display: block;
+  list-style: none;
+  float: left;
+  width: 23%;
+  padding: 19px 0 19px 0;
+  border: solid 2px #0c6c43;
+  border-width: 2px 0 2px 0;
+  font-size: 200%;
+}
+
+/* line 52, ../sass/screen.scss */
+a {
+  display: block;
+}
+
+/* line 58, ../sass/screen.scss */
+.nav-link, a, a:link :visited, a:hover, a:active {
+  color: #0c6c43;
+  text-decoration: none;
+}
+
+/* line 66, ../sass/screen.scss */
+a:hover {
+  opacity: 0.6;
+}
+
+/*care of Jem*/
+/* line 78, ../sass/screen.scss */
+.btn-red, .submit-btn {
+  background-color: #ff3835;
+}
+
+/* line 83, ../sass/screen.scss */
+.container, div section, div form {
+  width: 80%;
+  align: center;
+  margin: 0 auto;
+}
+
+/* line 89, ../sass/screen.scss */
+.submit-btn {
+  border: 0px;
+  border-radius: 2px;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  padding: 10px 10px 45px 10px;
+}
+
+/* line 100, ../sass/screen.scss */
+.jumbo-text {
+  font-size: 50px;
+}
+
+/* line 103, ../sass/screen.scss */
+.small-text {
+  font-size: 25px;
+}
+
+/* line 108, ../sass/screen.scss */
+div {
+  clear: both;
+}
+/* line 113, ../sass/screen.scss */
+div section h1, div section h2, div section h3 {
+  text-align: center;
+}
+/* line 118, ../sass/screen.scss */
+div form {
+  width: 500px;
+  height: 500px;
+  box-shadow: 2px 2px 10px 2px #888888;
+  border-radius: 9px;
+  padding: 20px 5px 5px 5px;
+}
+/* line 126, ../sass/screen.scss */
+div img {
+  right: 10px;
+}
+
+/*care of ken*/
+/* line 132, ../sass/screen.scss */
+footer {
+  background-color: #0c6c43;
+  color: #FFFFFF;
+}
+/* line 135, ../sass/screen.scss */
+footer section {
+  text-align: center;
+  display: inline;
+  float: left;
+  width: 23%;
+  height: auto;
+  font-size: 150%;
+}
+/* line 143, ../sass/screen.scss */
+footer li {
+  list-style: none;
 }
