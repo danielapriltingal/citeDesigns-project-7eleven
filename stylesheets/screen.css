@@ -2,35 +2,35 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 body {
   background-color: #FFFFFF;
-  font-family: Geo Sans-Light;
+  font-family: SansSerif;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 header {
   height: 216px;
   width: 100%;
   background: url("../src/img/banner.png") no-repeat;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 nav {
   margin: 0 9% 0 12%;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 ul :first-child {
   border-width: 2px 0 2px 2px;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 ul :last-child {
   border-width: 2px 2px 2px 0;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 li {
   text-align: center;
   display: block;
@@ -43,65 +43,91 @@ li {
   font-size: 200%;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 a {
   display: block;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .nav-link, a, a:link :visited, a:hover, a:active {
   color: #0c6c43;
   text-decoration: none;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 a:hover {
   opacity: 0.6;
 }
 
 /*care of Jem*/
-/* line 78, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .btn-red, .submit-btn {
   background-color: #ff3835;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .container, div section, div form {
   width: 80%;
   align: center;
   margin: 0 auto;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .submit-btn {
   border: 0px;
   border-radius: 2px;
   color: #ffffff;
-  width: 200px;
-  height: 50px;
+  text-align: center;
+  text-decoration: none;
   font-size: 30px;
-  padding: 10px 10px 45px 10px;
+  padding: 10px 60px;
+  float: right;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .jumbo-text {
-  font-size: 50px;
+  font-size: 35px;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .small-text {
   font-size: 25px;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
+.form-input {
+  border: 0px;
+  border-radius: 3px;
+  background-color: #cedbca;
+  padding: 15px;
+  margin: 10px;
+  font-size: 25px;
+}
+
+/* line 124, ../sass/screen.scss */
+.form-date {
+  border: 0px;
+  border-radius: 3px;
+  background-color: #cedbca;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* line 130, ../sass/screen.scss */
+.name {
+  display: inline-block;
+  background-color: black;
+}
+
+/* line 135, ../sass/screen.scss */
 div {
   clear: both;
 }
-/* line 113, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 div section h1, div section h2, div section h3 {
   text-align: center;
 }
-/* line 118, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 div form {
   width: 500px;
   height: 500px;
@@ -109,18 +135,60 @@ div form {
   border-radius: 9px;
   padding: 20px 5px 5px 5px;
 }
-/* line 126, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
+div form label {
+  font-size: 25px;
+}
+/* line 159, ../sass/screen.scss */
+div form span {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-size: 25px;
+}
+/* line 169, ../sass/screen.scss */
+div form span:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #cedbca;
+}
+/* line 183, ../sass/screen.scss */
+div form input[type=checkbox] {
+  display: none;
+}
+/* line 187, ../sass/screen.scss */
+div form .checkbox span:before {
+  border-radius: 3px;
+}
+/* line 191, ../sass/screen.scss */
+div form input[type=checkbox]:checked + span:before {
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 15px;
+}
+/* line 200, ../sass/screen.scss */
 div img {
   right: 10px;
 }
 
 /*care of ken*/
-/* line 132, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 footer {
   background-color: #0c6c43;
   color: #FFFFFF;
 }
-/* line 135, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 footer section {
   text-align: center;
   display: inline;
@@ -129,7 +197,7 @@ footer section {
   height: auto;
   font-size: 150%;
 }
-/* line 143, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 footer li {
   list-style: none;
 }
