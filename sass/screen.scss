@@ -43,51 +43,18 @@ header{
   text-decoration: $non-val;
 }
 
-<<<<<<< HEAD
-  nav {
-    margin: 0 9% 0 12%;
-=======
+
 nav {
     ul{
       margin: 0 0 0 4%;
     }
->>>>>>> 61dab18fba7510cca39eb1168f9560f2fb5cf2b9
     ul :first-child {
       border-width: $px-2 0 $px-2 $px-2;
     }
     ul :last-child {
       border-width: $px-2 $px-2 $px-2 0;
     }
-<<<<<<< HEAD
-      li {
-        text-align: $c-position;
-        display: block;
-        list-style: $non-val;
-        float: $l-position;
-        width: 23%;
-        padding: 19px 0 19px 0;
-        border: solid $px-2 $color;
-        border-width: $px-2 0 $px-2 0;
-        font-size: 200%;
-      }
-    a{
-      display:block;
-      @extend .nav-link
-    }
-  }
 
-a:link :visited{
-  @extend .nav-link;
-}
-a:hover{
-  @extend .nav-link;
-  opacity: 0.6;
-}
-a:active{
-  @extend .nav-link;
-}
-
-=======
     li {
       text-align: $c-position;
       display: block;
@@ -115,7 +82,6 @@ a:active{
   color: $color;
   text-decoration: $non-val;
 }
->>>>>>> 61dab18fba7510cca39eb1168f9560f2fb5cf2b9
 
 /*care of Jem*/
 
