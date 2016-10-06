@@ -30,7 +30,18 @@ body {
 
 }
 
-
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
 
 header{
   height: 216px;
@@ -101,6 +112,7 @@ nav {
   font-size: 30px;
   padding: 10px 60px;
   float: right;
+  margin: 50px;
 }
 
 .jumbo-text{
@@ -117,22 +129,38 @@ $radius: 3px;
   background-color: #cedbca;
 }
 
+$margin: 15px;
 .form-input{
   @include border;
   padding: 15px;
-  margin: 10px;
+  margin: $margin;
+
   font-size: $font-size;
+  width: 400px;
 }
 
 .form-date{
   @include border;
   padding: 10px;
   border-radius: $radius + 7;
+  font-size: $font-size - 6;
+  margin-left: 12px;
+}
+.parag{
+  margin: 10px;
 }
 
 .name{
   display: inline-block;
   background-color: black;
+}
+
+@mixin box-shadow{
+  width: 560px;
+  height: 500px;
+  box-shadow: 5px 2px 20px 5px #888888;
+  border-radius: 9px;
+  padding: 50px 0px 5px 50px;
 }
 
 div {
@@ -143,22 +171,16 @@ div {
     h1,h2,h3{
       text-align: center;
     }
+
+    .box-div{@include box-shadow;}
   }
-div{
-  img{
-    position: absolute;
+  div{
+    img{
+      position: absolute;
+    }
   }
-}
   form{
-
     @extend .container;
-    width: 500px;
-    height: 500px;
-    box-shadow: 2px 2px 10px 2px #888888;
-    border-radius: 9px;
-    padding: 20px 5px 5px 5px;
-
-
     label{
       font-size: $font-size;
     }
@@ -170,7 +192,9 @@ div{
       position: relative;
       padding-left: 25px;
       margin-right: 15px;
-      font-size: $font-size;
+      margin-top: 50px;
+      font-size: $font-size - 5;
+      float:right;
     }
 
     span:before{
@@ -186,6 +210,7 @@ div{
       bottom: 1px;
       background-color: #cedbca;
       //box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+
     }
     input[type=checkbox] {
       display: none;
