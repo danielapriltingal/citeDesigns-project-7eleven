@@ -15,23 +15,26 @@ header {
   background: url("../src/img/banner.png") no-repeat;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
+.nav-link, nav a, a:link :visited, a:hover, a:active {
+  color: #0c6c43;
+  text-decoration: none;
+}
+
+/* line 36, ../sass/screen.scss */
 nav {
   margin: 0 9% 0 12%;
 }
-
-/* line 35, ../sass/screen.scss */
-ul :first-child {
+/* line 38, ../sass/screen.scss */
+nav ul :first-child {
   border-width: 2px 0 2px 2px;
 }
-
-/* line 38, ../sass/screen.scss */
-ul :last-child {
+/* line 41, ../sass/screen.scss */
+nav ul :last-child {
   border-width: 2px 2px 2px 0;
 }
-
-/* line 41, ../sass/screen.scss */
-li {
+/* line 44, ../sass/screen.scss */
+nav li {
   text-align: center;
   display: block;
   list-style: none;
@@ -42,37 +45,30 @@ li {
   border-width: 2px 0 2px 0;
   font-size: 200%;
 }
-
-/* line 52, ../sass/screen.scss */
-a {
+/* line 55, ../sass/screen.scss */
+nav a {
   display: block;
 }
 
-/* line 58, ../sass/screen.scss */
-.nav-link, a, a:link :visited, a:hover, a:active {
-  color: #0c6c43;
-  text-decoration: none;
-}
-
-/* line 66, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 a:hover {
   opacity: 0.6;
 }
 
 /*care of Jem*/
-/* line 78, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .btn-red, .submit-btn {
   background-color: #ff3835;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .container, div section, div form {
   width: 80%;
   align: center;
   margin: 0 auto;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .submit-btn {
   border: 0px;
   border-radius: 2px;
@@ -83,25 +79,25 @@ a:hover {
   padding: 10px 10px 45px 10px;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .jumbo-text {
   font-size: 50px;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .small-text {
   font-size: 25px;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 div {
   clear: both;
 }
-/* line 113, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 div section h1, div section h2, div section h3 {
   text-align: center;
 }
-/* line 118, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 div form {
   width: 500px;
   height: 500px;
@@ -109,27 +105,31 @@ div form {
   border-radius: 9px;
   padding: 20px 5px 5px 5px;
 }
-/* line 126, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 div img {
   right: 10px;
 }
 
 /*care of ken*/
-/* line 132, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 footer {
-  background-color: #0c6c43;
-  color: #FFFFFF;
+  background-color: #ff3835;
 }
-/* line 135, ../sass/screen.scss */
-footer section {
-  text-align: center;
-  display: inline;
-  float: left;
-  width: 23%;
-  height: auto;
-  font-size: 150%;
-}
-/* line 143, ../sass/screen.scss */
-footer li {
+/* line 133, ../sass/screen.scss */
+footer section ul {
+  background-color: #ff3835;
   list-style: none;
+}
+/* line 137, ../sass/screen.scss */
+footer section li {
+  background-color: #ff3835;
+  list-style: none;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1000px) {
+  /* line 147, ../sass/screen.scss */
+  .hide {
+    display: none;
+  }
 }

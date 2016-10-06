@@ -28,10 +28,13 @@ header{
   width: 100%;
   background: $background-header no-repeat;
 }
+.nav-link {
+  color: $color;
+  text-decoration: $non-val;
+}
 
   nav {
     margin: 0 9% 0 12%;
-  }
     ul :first-child {
       border-width: $px-2 0 $px-2 $px-2;
     }
@@ -49,16 +52,11 @@ header{
         border-width: $px-2 0 $px-2 0;
         font-size: 200%;
       }
-  a{
-    display:block;
-    @extend .nav-link
+    a{
+      display:block;
+      @extend .nav-link
+    }
   }
-
-
-.nav-link {
-  color: $color;
-  text-decoration: $non-val;
-}
 
 a:link :visited{
   @extend .nav-link;
@@ -130,18 +128,24 @@ div {
 
 /*care of ken*/
 footer{
-  background-color: $color;
-  color: #FFFFFF;
+  background-color: #ff3835;
   section {
-    text-align: $c-position;
-    display: inline;
-    float: $l-position;
-    width: 23%;
-    height: $auto-val;
-    font-size: 150%;
+    ul{
+      background-color: #ff3835;
+      list-style: none;
+    }
+    li{
+      background-color: #ff3835;
+      list-style: $non-val;
+    }
   }
-  li{
-    list-style: $non-val;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1000px){
+  .hide{
+    display: none;
   }
 }
 
